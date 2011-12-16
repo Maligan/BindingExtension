@@ -16,7 +16,7 @@ BindingExtension.Attached = true
 -- Прикрепление функций к событиям отрисовки ToolTip
 --
 function BindingExtension:SetToolTip(enable)
-	if enable and self.Attached then self:AttachToolTip end
+	if enable and not self.Attached then self:AttachToolTip() end
 	self.ToolTipEnable = enable
 end
 
