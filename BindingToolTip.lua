@@ -10,13 +10,13 @@
 if not BindingExtension then BindingExtension = {} end
 if not BindingExtension.Setting then BindingExtension.Setting = {} end
 BindingExtension.Settings.ToolTipEnable = false
-BindingExtension.Attached = true
+BindingExtension.Attached = false 
 
 --
 -- Прикрепление функций к событиям отрисовки ToolTip
 --
 function BindingExtension:SetToolTip(enable)
-	if enable and self.Attached then self:AttachToolTip end
+	if enable and self.Attached then self:AttachToolTip() end
 	self.ToolTipEnable = enable
 end
 
