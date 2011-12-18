@@ -7,8 +7,10 @@
 --
 -- Инициализация переменных аддона
 --
-if not BindingExtension then BindingExtension = {} end
-if not BindingExtension.Setting then BindingExtension.Setting = {} end
+_G["BindingExtension"] = {}
+--if not BindingExtension then BindingExtension = {} end
+--if not BindingExtension.Settings then BindingExtension.Settings = {} end
+BindingExtension.Settings = {}
 BindingExtension.Settings.ToolTipEnable = false
 BindingExtension.Attached = false 
 
@@ -16,19 +18,22 @@ BindingExtension.Attached = false
 -- Прикрепление функций к событиям отрисовки ToolTip
 --
 function BindingExtension:SetToolTip(enable)
-	if enable and not self.Attached then self:AttachToolTip() end
+	if enable and not self.Attached then self:AttachToGameToolTip() end
 	self.ToolTipEnable = enable
+	if self.ToolTipEnable then	print "Enable" end
 end
 
 -- Вставка функций в скрипты GameToolTip
 function BindingExtension:AttachToGameToolTip()
 	-- Для заклинаний строчка вставляется в конце 
 	GameTooltip:HookScript("OnTooltipSetSpell",
-	function (self) 
-		if BindingExtension.Settings.EnableToolTip then 
-			local name = self:GetSpell()
-			local line = BindingExtension.GetBindingString("SPELL", name)
-			self:AddLine(line)
+	function (self, ...) 
+		print "Hellow!"
+		if _G["BindingExtension"].Settings.ToolTipEnable then 
+			print "World!"
+			local name = this:GetSpell()
+			local line = _G["BindingExtension"].GetBindingString("SPELL", name)
+			this:AddLine(line)
 		end
 	end)
 
@@ -36,7 +41,7 @@ function BindingExtension:AttachToGameToolTip()
 	BindingExtension.OriginalOnToolTipAddMoney = GameTooltip:GetScript("OnTooltipAddMoney")
 	GameTooltip:SetScript("OnTooltipAddMoney", 
 	function (self, ...)
-		if BindingExtension.Settings.EnableToolTip then 
+		if BindingExtension.Settings.ToolTipEnable then 
 			local name = self:GetItem()
 			local line = BindingExtension.GetBindingString("ITEM", name)
 			self:AddLine(line)
@@ -76,3 +81,6 @@ function BindingExtension.GetBindingString(kind, name)
 	if key then key = "Клавиша: |cffffffff"..BindingExtension.RenameKey(key).."|r" end
 	return key
 end
+
+BindingExtension:SetToolTip(true)
+
