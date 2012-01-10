@@ -1,6 +1,8 @@
 ﻿## Interface: 40300
 ## Title: Binding Extension
+## Author: Maligan
 ## Title-ruRU: Расширение привязок
 ## Notes: Adds interface to custom keybinding
 ## Notes-ruRU: Назначение клавишам заклинаний, предметов и макросов
+## Dependencies: Blizzard_MacroUI
 Binding_Extension.lua
