@@ -1,0 +1,3 @@
+BINDING_EXTENSION_PROMPT_BINDING = "Назначьте клавишу для %s" 
+BINDING_EXTENSION_CREATE_BINDING = "Назначить "..NORMAL_FONT_COLOR_CODE.."%s"..FONT_COLOR_CODE_CLOSE.." для %s" 
+BINDING_EXTENSION_CLEAR_BINDING = "Сбросить клавишу для %s"
