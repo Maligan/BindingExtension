@@ -7,6 +7,8 @@
 -- BINDING_EXTENSION_CREATE_BINDING
 -- BINDING_EXTENSION_CLEAR_BINDING
 --
+-- by Maligan (maligan@rambler.ru) 
+--
 
 StaticPopupDialogs["BINDING_EXTENSION"] = {
 	--
@@ -109,7 +111,7 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 		if key ~= nil then
 			dialog.data.key = key 
 			-- Change text
-			local localizedKey = GetBindingText(key, "KEY_")
+			local localizedKey = NORMAL_FONT_COLOR_CODE..GetBindingText(key, "KEY_")..FONT_COLOR_CODE_CLOSE
 			local coloredName = dialog.data.info.GetColored(dialog.data.kind,dialog.data.name)
 			_G[dialog:GetName().."Text"]:SetFormattedText(BINDING_EXTENSION_CREATE_BINDING, localizedKey, coloredName)
 			if not dialog.button1:IsEnabled() then dialog.button1:Enable() end
