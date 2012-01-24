@@ -1,12 +1,16 @@
 ﻿## Interface: 40300
 ## Title: Binding Extension
-## Author: Maligan
 ## Notes: Keybinding interface 
+## Author: Maligan
 ## OptionalDeps: Blizzard_MacroUI
 
 # Localized Titles & Notes
 ## Title-ruRU: Расширение привязок
-## Notes-ruRU: Интерфейс для горячих клавиш 
+## Notes-ruRU: Интерфейс для горячих клавиш
+## Title-frFR: Raccourci clavier extension
+## Notes-frFR: Interface raccourci clavier
+## Title-deDE: Tastenkombination Erweiterung
+## Notes-deDE: Tastenkombination Schnittstelle
 
 # Content
 Localization.lua
