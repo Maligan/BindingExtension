@@ -117,6 +117,8 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 			dialog.maxWidthSoFar = nil 
 			dialog.maxHeightSoFar = nil 
 			StaticPopup_Resize(dialog, "BINDING_EXTENSION")
+			-- Play sound
+			PlaySound("igMainMenuOpen")
 		end
 	end,
 	--
