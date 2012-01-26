@@ -26,7 +26,7 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 	-- Initialize dialog
 	OnShow = function (self, ...) 
 		self.data.info = StaticPopupDialogs["BINDING_EXTENSION"]
-		self.data.colorizeEntity = self.data.info.GetColored(self.data.kind, self.data.name)
+		self.data.colorizedName = self.data.info.GetColored(self.data.kind, self.data.name)
 		-- New or Owerride?
 		local key = GetBindingKey(self.data.kind.." "..self.data.name)
 		if key == nil then
@@ -112,8 +112,8 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 			dialog.data.key = key 
 			-- Change text
 			local localizedKey = NORMAL_FONT_COLOR_CODE..GetBindingText(key, "KEY_")..FONT_COLOR_CODE_CLOSE
-			local coloredName = dialog.data.info.GetColored(dialog.data.kind,dialog.data.name)
-			_G[dialog:GetName().."Text"]:SetFormattedText(BINDING_EXTENSION_CREATE_BINDING, localizedKey, coloredName)
+			local colorizedName = dialog.data.colorizedName
+			_G[dialog:GetName().."Text"]:SetFormattedText(BINDING_EXTENSION_CREATE_BINDING, localizedKey, colorizedName)
 			if not dialog.button1:IsEnabled() then dialog.button1:Enable() end
 			-- Resizing
 			dialog.maxWidthSoFar = nil 
