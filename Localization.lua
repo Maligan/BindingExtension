@@ -1,4 +1,4 @@
-﻿local prompt, create, clear 
+local prompt, create, clear 
 local locale = GetLocale()
 
 if locale == "ruRU" then

@@ -30,7 +30,7 @@ function BE:AttachDialogCall()
 	end
 
 	-- Attach to Container button (Bag item)
-	ContainerFrameItemButton_OriginOnModifiedClick = ContainerFrameItemButton_OnModifiedClick 	
+	ContainerFrameItemButton_OriginOnModifiedClick = ContainerFrameItemButton_OnModifiedClick
 	ContainerFrameItemButton_OnModifiedClick = function (self, button)
 		if BE.DialogEnable and BE.IsModifiedClick() and button == "LeftButton" then 
 			local itemName = GetItemInfo(GetContainerItemLink(self:GetParent():GetID(), self:GetID()))

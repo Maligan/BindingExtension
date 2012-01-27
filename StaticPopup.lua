@@ -30,10 +30,10 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 		-- New or Owerride?
 		local key = GetBindingKey(self.data.kind.." "..self.data.name)
 		if key == nil then
-			self.text:SetFormattedText(BINDING_EXTENSION_PROMPT_BINDING, self.data.colorizeEntity)
+			self.text:SetFormattedText(BINDING_EXTENSION_PROMPT_BINDING, self.data.colorizedName)
 			self.button1:Disable()
 		else
-			self.text:SetFormattedText(BINDING_EXTENSION_CLEAR_BINDING, self.data.colorizeEntity)
+			self.text:SetFormattedText(BINDING_EXTENSION_CLEAR_BINDING, self.data.colorizedName)
 		end	
 		-- Change script handlers
 		self.data.OriginOnKeyDown = self:GetScript("OnKeyDown")

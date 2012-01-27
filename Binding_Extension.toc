@@ -1,7 +1,8 @@
-﻿## Interface: 40300
+## Interface: 40300
 ## Title: Binding Extension
 ## Notes: Keybinding interface 
 ## Author: Maligan
+## Version: 1.1
 ## OptionalDeps: Blizzard_MacroUI
 
 # Localized Titles & Notes
