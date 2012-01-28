@@ -83,8 +83,7 @@ function BE:AttachTip()
 	function (self, ...) 
 		if BE.TipEnable then 
 			local name = self:GetSpell()
-			local key = GetBindingKey("SPELL "..name) 
-			BE.AddTip(self, key) 
+			if name ~= nil then BE.AddTip(self, GetBindingKey("SPELL "..name)) end
 		end
 	end)
 	-- Items 
@@ -92,8 +91,7 @@ function BE:AttachTip()
 	function (self, ...)
 		if BE.TipEnable then 
 			local name = self:GetItem()
-			local key = GetBindingKey("ITEM "..name) 
-			BE.AddTip(self, key) 
+			if name ~= nil then BE.AddTip(self, GetBindingKey("ITEM "..name)) end
 		end
 	end)
 	-- Macro (There is not OnTooltipSetMacro)
