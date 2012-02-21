@@ -12,6 +12,8 @@
 ## Notes-frFR: Interface raccourci clavier
 ## Title-deDE: Tastenkombination Erweiterung
 ## Notes-deDE: Tastenkombination Schnittstelle
+## Title-esES: Atajo de teclado de extensión
+## Notes-esES: La interfaz para atajo de teclado
 
 # Content
 Localization.lua

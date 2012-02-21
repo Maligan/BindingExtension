@@ -35,7 +35,7 @@ function BE:AttachDialogCall()
 		if BE.DialogEnable and BE.IsModifiedClick() and button == "LeftButton" then 
 			local itemName = GetItemInfo(GetContainerItemLink(self:GetParent():GetID(), self:GetID()))
 			if itemName ~= nil then
-				BE.PopupDialog("ITEM", itemName) 
+				BE.PopupDialog("ITEM", itemName)
 			end
 		else
 			ContainerFrameItemButton_OriginOnModifiedClick(self, button)
