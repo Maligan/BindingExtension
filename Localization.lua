@@ -16,8 +16,8 @@ elseif locale == "deDE" then
 	prompt = "Satz Tastenkombination für %s"
 	create = "Satz %s für %s"
 	clear = "Klarer Tastenkombination für %s"
-elseif locale == "esES" then
-	-- [Spanish (Spain)]
+elseif locale == "esES" or locale == "esMX" then
+	-- [Spanish (Spain and Mexico)]
 	prompt = "Asignar atajo de teclado para %s"
 	create = "Asignar %s para %s"
 	clear = "Borrar atajo de teclado para %s"
