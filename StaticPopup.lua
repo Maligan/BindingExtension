@@ -27,7 +27,7 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 	OnShow = function (self, ...) 
 		self.data.info = StaticPopupDialogs["BINDING_EXTENSION"]
 		self.data.colorizedName = self.data.info.GetColored(self.data.kind, self.data.name)
-		-- New or Owerride?
+		-- New or Override?
 		local key = GetBindingKey(self.data.kind.." "..self.data.name)
 		if key == nil then
 			self.text:SetFormattedText(BINDING_EXTENSION_PROMPT_BINDING, self.data.colorizedName)
@@ -51,7 +51,7 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 		self.data = nil
 	end,
 	-- Disable accept button in combat
-	OnUpdate = function(self, ...)
+	OnUpdate = function (self, ...)
 		if self.data.combat ~= UnitAffectingCombat("player") then
 			self.data.combat = UnitAffectingCombat("player")
 			if self.data.combat then
@@ -75,7 +75,7 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 	-- Input handlers
 	--
 	-- Handle keyboard input
-	KeyboardHandler = function(dialog, key)
+	KeyboardHandler = function (dialog, key)
 		if key == "UNKNOWN" 
 			or string.find(key, "SHIFT") 
 			or string.find(key, "CTRL") 
@@ -85,7 +85,7 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 		dialog.data.info.Change(dialog, key)
 	end,	
 	-- Handle mouse input
-	MouseHandler = function(dialog, key)
+	MouseHandler = function (dialog, key)
 		if key == "UNKNOWN" then return
 		elseif key == "LeftButton" then key = "BUTTON1" 
 		elseif key == "RightButton" then key = "BUTTON2"
@@ -96,7 +96,7 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 		dialog.data.info.Change(dialog, key)
 	end,
 	-- Handle mouse wheel
-	WheelHandler = function(dialog, arg)
+	WheelHandler = function (dialog, arg)
 		local key
 		if arg > 0 then 
 			key = "MOUSEWHEELUP"
@@ -107,7 +107,7 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 		dialog.data.info.Change(dialog, key)
 	end,
 	-- Change status key
-	Change = function(dialog, key)
+	Change = function (dialog, key)
 		if key ~= nil then
 			dialog.data.key = key 
 			-- Change text
