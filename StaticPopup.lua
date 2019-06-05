@@ -15,8 +15,8 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 	-- StaticPopup standard variables
 	--
 	text = "",
-	button1 = TEXT(ACCEPT), 
-	button2 = TEXT(CANCEL), 
+	button1 = GetText("ACCEPT"), 
+	button2 = GetText("CANCEL"), 
 	timeout = 0,
 	whileDead = true,
 	hideOnEscape = false,
@@ -119,8 +119,6 @@ StaticPopupDialogs["BINDING_EXTENSION"] = {
 			dialog.maxWidthSoFar = nil 
 			dialog.maxHeightSoFar = nil 
 			StaticPopup_Resize(dialog, "BINDING_EXTENSION")
-			-- Play sound
-			PlaySound("igMainMenuOpen")
 		end
 	end,
 	--
