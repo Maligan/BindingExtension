@@ -1,6 +1,6 @@
-## Interface: 40300
+## Interface: 80100
 ## Title: Binding Extension
-## Notes: Keybinding interface 
+## Notes: Keybinding interface
 ## Author: Maligan
 ## Version: 1.2
 ## OptionalDeps: Blizzard_MacroUI
