@@ -1,8 +1,8 @@
-## Interface: 80100
+## Interface: 11302
 ## Title: Binding Extension
 ## Notes: Keybinding interface
 ## Author: Maligan
-## Version: 1.3
+## Version: 1.4
 ## OptionalDeps: Blizzard_MacroUI
 
 # Localized Titles & Notes
@@ -15,7 +15,6 @@
 ## Title-esES: Atajo de teclado de extensión
 ## Notes-esES: La interfaz para atajo de teclado
 
-# Content
 Localization.lua
 StaticPopup.lua
-Binding_Extension.lua
+BindingExtension.lua
